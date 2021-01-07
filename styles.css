@@ -1,0 +1,156 @@
+*{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+}
+
+.parent-container{
+    width: 100%;
+    position: relative;
+}
+
+.left{
+    height: 100vh;
+    width: 50%;
+    background: url(images/manishedit2.jpg) center no-repeat;
+    /* background-color: aquamarine; */
+    background-size: cover;
+    position: fixed;
+    left: 0px;
+}
+
+.right{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    padding: 2em 4em 2em 4em;
+    font-size: medium;
+}
+
+.section{
+    margin-bottom: 2em;
+    /* line-height: 1.6; */
+}
+
+.section-heading{
+    color: rgb(31, 160, 121);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.socials{
+    width: max-content;
+    margin: 0.5em auto;
+}
+
+.socials-list, .languages-list, .technologies-list, .project-list, .experience-list, .education-list{
+    list-style: none;
+    font-size: 14px;
+}
+
+.intro{
+    font-family: Tahoma;
+    color: white;
+    text-align: center;
+    padding-top: 65%;
+    text-shadow: 2px 2px 7px rgb(21, 88, 51);
+}
+
+.social-link{
+    margin: 0em 1em 0em 1em;
+    display: inline;
+}
+
+.fab{
+    color: black;
+}
+
+/* .skills{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.about-description {
+    font-size: 14px;
+}
+
+.language, .techs{
+    flex-basis: 48%; /*Same as width but a more flexbox thing*/
+}
+
+.project, .experience, .education {
+    margin-top: 1em;
+}
+
+.projecttitle, .experiencetitle, .educationtitle{
+    color: rgb(70, 70, 70);
+}
+
+.download {
+    display: block;
+    margin-left: 32%;
+    color: rgb(15, 121, 47);
+    padding: 0.5em 1em 0.5em 1em;
+    font-weight: bold;
+    font-size: medium;
+    position: relative;
+    border: none;
+    background:transparent;
+    cursor: pointer;
+}
+
+/* .qw {
+    background-color: aqua;
+    margin: auto;
+    width: max-content;
+} */
+
+.download:hover::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f30b";
+    margin-left: 0.5em;
+    animation-name: arrowAnimation;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowAnimation{
+    from{
+        margin-left: 0.5em;
+    }
+
+    to{
+        margin-left: 0.8em;
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .left, .right{
+        width: 100%;
+    }
+
+    .left{
+        position: static;
+    }
+
+    .intro{
+        padding-top: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .skills{
+        display: flex;
+        justify-content: space-between;
+    }
+}
